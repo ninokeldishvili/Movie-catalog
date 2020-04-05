@@ -3,14 +3,13 @@ import Poster from '../Poster/Poster'
 import Description from '../Description/Description'
 import "./Movie.css"
 
-const Movie = function () {
+const Movie = function (props) {
     return (
-        <div className="movie-container ">
-            <Poster
-                src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
-                alt="Fight Club"></Poster>
-            <Description rating="8.5" name="Fight Club"></Description>
-        </div>    
+        <div className="movie-container">
+            <Poster src={props.movieData.src} alt={props.movieData.alt}></Poster>
+            <Description rating={props.movieData.rating} name={props.movieData.name}></Description>
+        </div>
     )
 }
-export default Movie
+
+export default Movie;

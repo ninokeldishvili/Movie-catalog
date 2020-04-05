@@ -1,0 +1,12 @@
+.lang-switch{
+	float: right;
+}
+
+.lang-switch span{
+	font-weight: 700;
+}
+
+.lang-switch span:hover {
+	color: red;
+	cursor:pointer;
+}
