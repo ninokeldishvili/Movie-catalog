@@ -16,5 +16,6 @@ code {
     width: 80vw;
     margin:auto;
     padding:20px;
-    border:2px solid red;
+    background-color: #282c34;
+    color: white;
 }
