@@ -13,9 +13,8 @@ code {
 }
 
 .root {
-    width: 80vw;
     margin:auto;
-    padding:20px;
+    padding:3% 6%;
     background-color: #282c34;
     color: white;
 }

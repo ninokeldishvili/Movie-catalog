@@ -4,10 +4,10 @@
     "\\src",
     "\\src\\components",
     "\\src\\components\\Description",
-    "\\src\\components\\LanguageSwitch",
     "\\src\\components\\Movie",
     "\\src\\components\\Poster",
     "\\src\\Data"
   ],
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
