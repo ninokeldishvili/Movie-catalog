@@ -1,5 +1,6 @@
 import React from 'react';
-import Movie from './components/Movie/Movie'
+import TrendingMovie from './components/TrendingMovie/TrendingMovie'
+import ComingSoonMovie from './components/ComingSoonMovie/ComingSoonMovie'
 import MoviesData from '../src/Data/MoviesData'
 import MoviesData_Geo from '../src/Data/MoviesData_Geo'
 import VIPPoster from './components/VIPPoster/VIPPoster'
@@ -31,17 +32,31 @@ class App extends React.Component {
                 <VIPPoster></VIPPoster>
                 <header className="App-header">
                     {/* <Language lang="GEO" id="ka"></Language>
-            <Language lang="ENG" id="en"></Language> */}
+            <Language lang="ENG" id="en"></Language> 
 
                     <div className="lang-switch">
                         <span onClick={this.updateDataByLanguage.bind(this, 'ka')}>GEO</span >/<span onClick={this.updateDataByLanguage.bind(this, 'en')}>ENG</span>
+                    </div>*/}
+                    {/*<h1>What to watch</h1>*/}
+                    
+                </header>
+                <div className="row">
+                    <div className="col-lg-9 section">
+                        <div className="section-title">Trending</div>
+                        <div className="section-content">
+                            {this.state.MoviesData.map(movie => <TrendingMovie key={movie.id} movieData={movie}></TrendingMovie>)}
+                        </div>
                     </div>
 
-                    <h1>What to watch</h1>
-                </header>
-                <div>
-                    {this.state.MoviesData.map(movie => <Movie key={movie.id} movieData={movie}></Movie>)}
+                    <div className="col-lg-3 section">
+                        <div className="section-title">Coming Soon</div>
+                        <div className="section-content">
+                            <ComingSoonMovie></ComingSoonMovie>
+                            <ComingSoonMovie></ComingSoonMovie>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         );
     }
