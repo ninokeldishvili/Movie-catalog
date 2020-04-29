@@ -3,11 +3,10 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Description",
-    "\\src\\components\\Movie",
-    "\\src\\components\\Poster",
-    "\\src\\Data"
+    "\\src\\components\\Language",
+    "\\src\\components\\Navigation",
+    "\\src\\components\\VIPPoster"
   ],
-  "SelectedNode": "\\src\\App.js",
+  "SelectedNode": "\\src\\components\\Navigation\\Navigation.js",
   "PreviewInSolutionExplorer": false
 }
