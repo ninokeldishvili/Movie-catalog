@@ -3,10 +3,13 @@
     "",
     "\\src",
     "\\src\\components",
+    "\\src\\components\\ComingSoonMovie",
     "\\src\\components\\Language",
     "\\src\\components\\Navigation",
-    "\\src\\components\\VIPPoster"
+    "\\src\\components\\TrendingMovie",
+    "\\src\\components\\VIPPoster",
+    "\\src\\images"
   ],
-  "SelectedNode": "\\src\\components\\Navigation\\Navigation.js",
+  "SelectedNode": "\\src\\components\\ComingSoonMovie\\ComingSoonMovie.js",
   "PreviewInSolutionExplorer": false
 }

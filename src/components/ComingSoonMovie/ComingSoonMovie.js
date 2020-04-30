@@ -1,16 +1,16 @@
 import React from "react"
-import Description from '../Description/Description'
 import "./ComingSoonMovie.css"
-import poster from '../../images/poster.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 const ComingSoonMovie = function (props) {
     return (
         <div className="row movie-container-cs">
-            <div className="col-4"><img src={poster} alt="poster"/></div>
+            <div className="col-4"><img src={props.movieData.src} alt={props.movieData.alt} /></div>
             <div className="col-8">
-                <div>Movie Name</div>
-                <div>Rating</div>
-                <div>Date</div>
+                <div>{props.movieData.name}</div>
+                <div><FontAwesomeIcon icon={faStar}></FontAwesomeIcon> {props.movieData.rating}</div>
+                <div>20.05.2020</div>
             </div>
         </div>
     )

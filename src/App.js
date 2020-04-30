@@ -51,8 +51,7 @@ class App extends React.Component {
                     <div className="col-lg-3 section">
                         <div className="section-title">Coming Soon</div>
                         <div className="section-content">
-                            <ComingSoonMovie></ComingSoonMovie>
-                            <ComingSoonMovie></ComingSoonMovie>
+                            {this.state.MoviesData.map(movie => <ComingSoonMovie key={movie.id} movieData={movie}></ComingSoonMovie>)}
                         </div>
                     </div>
                 </div>
