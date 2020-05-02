@@ -1,9 +1,8 @@
-.lang-switch{
+.lang-switch {
+	position: relative;
+	z-index: 1;
 	float: right;
-}
-
-.lang-switch span{
-	font-weight: 700;
+	margin: 0 2% 1% 0;
 }
 
 .lang-switch span:hover {

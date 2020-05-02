@@ -1,20 +1,31 @@
-import React from 'react'
+﻿import React from 'react'
 import './VIPPoster.css'
 import Navigation from '../Navigation/Navigation'
 import poster from '../../images/poster.jpg';
 
+class VIPPoster extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-const VIPPoster = function () {
-    return (
-        <div className="container-fluid poster-container">
-            <Navigation></Navigation>
+    render() {
+        let watchNow = 'Watch Now';
 
-            <img src={poster} alt="poster" />
-            <div className="poster-lables-container">
-                <h1>Bohemian Rapsody</h1>
-                <button className="watch-now-btn">Watch Now</button>
+        if (this.props.lang === 'ka') {
+            watchNow = 'ნახვა'
+        }
+
+        return (
+            <div className="container-fluid poster-container">
+                <Navigation lang={this.props.lang}></Navigation>
+
+                <img src={poster} alt="poster" />
+                <div className="poster-lables-container">
+                    <h1>{this.props.vipMovie}</h1>
+                    <button className="watch-now-btn">{watchNow}</button>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 export default VIPPoster

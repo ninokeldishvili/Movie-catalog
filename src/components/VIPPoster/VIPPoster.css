@@ -17,17 +17,20 @@
         border-radius: 40px;
     }
 
-    .watch-now-btn {
-        background: none;
-        border-radius: 40px;
-        border: 3px solid #8e58c6;
-        color: #fff;
-        font-size: 2.2rem;
-        padding: 3% 10%;
-        cursor: pointer;
-    }
+.watch-now-btn {
+    background: none;
+    border-radius: 40px;
+    border: 3px solid #8e58c6;
+    color: #fff;
+    font-size: 2.2rem;
+    padding: 5px 25px;
+    width: 240px;
+}
         .watch-now-btn:hover {
            background: #d2cbd79c;
+        }   
+        .watch-now-btn:focus {
+           outline:none;
         }
 
 .poster-lables-container {

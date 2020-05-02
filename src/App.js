@@ -1,57 +1,65 @@
-import React from 'react';
+﻿import React from 'react';
 import TrendingMovie from './components/TrendingMovie/TrendingMovie'
 import ComingSoonMovie from './components/ComingSoonMovie/ComingSoonMovie'
 import MoviesData from '../src/Data/MoviesData'
-import MoviesData_Geo from '../src/Data/MoviesData_Geo'
 import VIPPoster from './components/VIPPoster/VIPPoster'
 import "./App.css"
 import './components/Language/Language.css'
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             MoviesData: MoviesData,
             lang: 'en',
+            trending: 'Trending',
+            comingSoon: 'Coming Soon',
+            vipMovie: 'Bohemian Rapsody',
         }
-        this.updateDataByLanguage = this.updateDataByLanguage.bind(this);
+        this.setLangToKa = this.setLangToKa.bind(this);
+        this.setLangToEn = this.setLangToEn.bind(this);
     }
 
-    updateDataByLanguage(lang) {
-        //console.log("hi")
-        if (lang === 'en')
-            this.setState({ MoviesData: MoviesData });
-        else
-            this.setState({ MoviesData: MoviesData_Geo });
+    setLangToKa() {
+        this.setState({
+            lang: 'ka',
+            trending: 'პოპულარული',
+            comingSoon: 'მალე',
+            vipMovie: 'ბოჰემიური რაფსოდია'
+        })
+    }
 
+    setLangToEn() {
+        this.setState({
+            lang: 'en',
+            trending: 'Trending',
+            comingSoon: 'Coming Soon',
+            vipMovie: 'Bohemian Rapsody',
+        })
     }
 
     render() {
         return (
             <div className="App">
-                <VIPPoster></VIPPoster>
                 <header className="App-header">
-                    {/* <Language lang="GEO" id="ka"></Language>
-            <Language lang="ENG" id="en"></Language> 
-
-                    <div className="lang-switch">
-                        <span onClick={this.updateDataByLanguage.bind(this, 'ka')}>GEO</span >/<span onClick={this.updateDataByLanguage.bind(this, 'en')}>ENG</span>
-                    </div>*/}
-                    {/*<h1>What to watch</h1>*/}
                     
                 </header>
+                <div className="lang-switch">
+                    <span onClick={this.setLangToKa}>GEO</span>/<span onClick={this.setLangToEn}>ENG</span>
+                </div>
+                <VIPPoster lang={this.state.lang} vipMovie={this.state.vipMovie}></VIPPoster>
                 <div className="row">
                     <div className="col-lg-9 section">
-                        <div className="section-title">Trending</div>
+                        <div className="section-title">{this.state.trending}</div>
                         <div className="section-content">
-                            {this.state.MoviesData.map(movie => <TrendingMovie key={movie.id} movieData={movie}></TrendingMovie>)}
+                            {this.state.MoviesData.filter(m => m.tranding === true).map(movie => <TrendingMovie lang={this.state.lang} key={movie.id} movieData={movie}></TrendingMovie>)}
                         </div>
                     </div>
 
                     <div className="col-lg-3 section">
-                        <div className="section-title">Coming Soon</div>
+                        <div className="section-title">{this.state.comingSoon}</div>
                         <div className="section-content">
-                            {this.state.MoviesData.map(movie => <ComingSoonMovie key={movie.id} movieData={movie}></ComingSoonMovie>)}
+                            {this.state.MoviesData.map(movie => <ComingSoonMovie lang={this.state.lang} key={movie.id} movieData={movie}></ComingSoonMovie>)}
                         </div>
                     </div>
                 </div>

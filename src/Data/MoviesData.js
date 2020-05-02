@@ -1,63 +1,87 @@
-const MoviesData = [{
-  "id": 1,
-  "src": "https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 9.7,
-  "name": "Rohan and Runo"
+﻿const MoviesData = [{
+    "id": 1,
+    "src": "https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 9.7,
+    "name": "Rohan and Runo",
+    "name_geo": "როჰანი და რუნო",
+    "tranding": false,
 }, {
-  "id": 2,
-  "src": "https://m.media-amazon.com/images/M/MV5BZTNiY2FiYzktNWNmMi00YjMzLTkwMWItMGE3ZDc5OWYzODIyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 8.1,
-  "name": "Marvin-Lindgren"
+    "id": 2,
+    "src": "https://m.media-amazon.com/images/M/MV5BZTNiY2FiYzktNWNmMi00YjMzLTkwMWItMGE3ZDc5OWYzODIyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 8.1,
+    "name": "Marvin-Lindgren",
+    "name_geo": "მარვინ ლინდგრენი",
+    "tranding": true,
 }, {
-  "id": 3,
-  "src": "https://m.media-amazon.com/images/M/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 8.6,
-  "name": "Stehr-Champlin"
+    "id": 3,
+    "src": "https://m.media-amazon.com/images/M/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 8.6,
+    "name": "Stehr-Champlin",
+    "name_geo": "სტეარ ჩაპლინი",
+    "tranding": false,
 }, {
-  "id": 4,
-  "src": "https://m.media-amazon.com/images/M/MV5BMmJkM2M0OTUtNGI3NC00ZTNiLWI4MDUtMGI5MzM1MmQyNTliXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 8.3,
-  "name": "Schmitt-Cassin"
+    "id": 4,
+    "src": "https://m.media-amazon.com/images/M/MV5BMmJkM2M0OTUtNGI3NC00ZTNiLWI4MDUtMGI5MzM1MmQyNTliXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 8.3,
+    "name": "Schmitt-Cassin",
+    "name_geo": "შმიტ კასინი",
+    "tranding": true,
 }, {
-  "id": 5,
-  "src": "https://m.media-amazon.com/images/M/MV5BMTQ0NjUzMDMyOF5BMl5BanBnXkFtZTgwODA1OTU0MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 9.7,
-  "name": "McKenzie-Walter"
+    "id": 5,
+    "src": "https://m.media-amazon.com/images/M/MV5BMTQ0NjUzMDMyOF5BMl5BanBnXkFtZTgwODA1OTU0MDE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 9.7,
+    "name": "McKenzie-Walter",
+    "name_geo": "მაკკენზი ვალტერი",
+    "tranding": false,
 }, {
-  "id": 6,
-  "src": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 9.8,
-  "name": "King-Sauer"
+    "id": 6,
+    "src": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 9.8,
+    "name": "King-Sauer",
+    "name_geo": "კინგ საუერი"
+    , "tranding": false,
 }, {
-  "id": 7,
-  "src": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 10.0,
-  "name": "Runolfsdottir Inc"
+    "id": 7,
+    "src": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 10.0,
+    "name": "Runolfsdottir Inc",
+    "name_geo": "რუნოლფდოტი ინქ",
+    "tranding": false,
 }, {
-  "id": 8,
-  "src": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 7.8,
-  "name": "Konopelski and Morar"
+    "id": 8,
+    "src": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 7.8,
+    "name": "Konopelski and Morar",
+    "name_geo": "კონოპლესკი და მორა",
+    "tranding": true,
 }, {
-  "id": 9,
-  "src": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 8.3,
-  "name": "Lub and Funk"
+    "id": 9,
+    "src": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 8.3,
+    "name": "Lub and Funk",
+    "name_geo": "ლუბი და ფანკი",
+    "tranding": false,
 }, {
-  "id": 10,
-  "src": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 8.3,
-  "name": "Sons"
+    "id": 10,
+    "src": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 8.3,
+    "name": "Sons",
+    "name_geo": "ვაჟები",
+    "tranding": false,
 }, {
-  "id": 11,
-  "src": "https://m.media-amazon.com/images/M/MV5BYWIyODUxOTItOTYwNS00Mjc4LWI4ZjUtNWQ2YWVmNWQ1MmViXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_UY268_CR147,0,182,268_AL_.jpg",
-  "rating": 7.5,
-  "name": "Brown-Johns"
+    "id": 11,
+    "src": "https://m.media-amazon.com/images/M/MV5BYWIyODUxOTItOTYwNS00Mjc4LWI4ZjUtNWQ2YWVmNWQ1MmViXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_UY268_CR147,0,182,268_AL_.jpg",
+    "rating": 7.5,
+    "name": "Brown-Johns",
+    "name_geo": "ყავისფერი ჯონები",
+    "tranding": false,
 }, {
-  "id": 12,
-  "src": "https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg",
-  "rating": 7.6,
-  "name": "Pollich-Moen"
-  },]
+    "id": 12,
+    "src": "https://m.media-amazon.com/images/M/MV5BOTcwNzU2MGEtMzUzNC00MzMwLWJhZGItNDY3NDllYjU5YzAyXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    "rating": 7.6,
+    "name": "Pollich-Moen",
+    "name_geo": "პოლიხ მოენი",
+    "tranding": false,
+},]
 
 export default MoviesData;
