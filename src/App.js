@@ -4,7 +4,8 @@ import ComingSoonMovie from './components/ComingSoonMovie/ComingSoonMovie'
 import MoviesData from '../src/Data/MoviesData'
 import VIPPoster from './components/VIPPoster/VIPPoster'
 import "./App.css"
-import './components/Language/Language.css'
+import kaTexts from '../src/Data/Georgian'
+import enTexts from '../src/Data/English'
 
 class App extends React.Component {
     constructor() {
@@ -12,6 +13,7 @@ class App extends React.Component {
         this.state = {
             MoviesData: MoviesData,
             lang: 'en',
+            text: enTexts,
             trending: 'Trending',
             comingSoon: 'Coming Soon',
             vipMovie: 'Bohemian Rapsody',
@@ -23,18 +25,14 @@ class App extends React.Component {
     setLangToKa() {
         this.setState({
             lang: 'ka',
-            trending: 'პოპულარული',
-            comingSoon: 'მალე',
-            vipMovie: 'ბოჰემიური რაფსოდია'
+            text: kaTexts,
         })
     }
 
     setLangToEn() {
         this.setState({
             lang: 'en',
-            trending: 'Trending',
-            comingSoon: 'Coming Soon',
-            vipMovie: 'Bohemian Rapsody',
+            text: enTexts,
         })
     }
 
@@ -47,17 +45,17 @@ class App extends React.Component {
                 <div className="lang-switch">
                     <span onClick={this.setLangToKa}>GEO</span>/<span onClick={this.setLangToEn}>ENG</span>
                 </div>
-                <VIPPoster lang={this.state.lang} vipMovie={this.state.vipMovie}></VIPPoster>
+                <VIPPoster text={this.state.text} vipMovie={this.state.text.vipMovie}></VIPPoster>
                 <div className="row">
                     <div className="col-lg-9 section">
-                        <div className="section-title">{this.state.trending}</div>
+                        <div className="section-title">{this.state.text.trending}</div>
                         <div className="section-content">
                             {this.state.MoviesData.filter(m => m.tranding === true).map(movie => <TrendingMovie lang={this.state.lang} key={movie.id} movieData={movie}></TrendingMovie>)}
                         </div>
                     </div>
 
                     <div className="col-lg-3 section">
-                        <div className="section-title">{this.state.comingSoon}</div>
+                        <div className="section-title">{this.state.text.comingSoon}</div>
                         <div className="section-content">
                             {this.state.MoviesData.map(movie => <ComingSoonMovie lang={this.state.lang} key={movie.id} movieData={movie}></ComingSoonMovie>)}
                         </div>

@@ -39,3 +39,16 @@
     margin-left:20px;
 }
 
+.lang-switch {
+    position: relative;
+    z-index: 1;
+    float: right;
+    margin: 0 2% 1% 0;
+}
+
+    .lang-switch span:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+

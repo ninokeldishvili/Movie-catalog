@@ -8,8 +8,8 @@
     "\\src\\components\\Navigation",
     "\\src\\components\\TrendingMovie",
     "\\src\\components\\VIPPoster",
-    "\\src\\images"
+    "\\src\\Data"
   ],
-  "SelectedNode": "\\src\\components\\ComingSoonMovie\\ComingSoonMovie.js",
+  "SelectedNode": "\\src\\components\\VIPPoster\\VIPPoster.js",
   "PreviewInSolutionExplorer": false
 }

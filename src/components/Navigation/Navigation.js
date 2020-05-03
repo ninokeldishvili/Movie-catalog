@@ -6,25 +6,7 @@ class Navigation extends React.Component {
         super(props)
     }
     render() {
-        const lang = this.props.lang;
-        let data = {};
-
-        if (lang === 'en') {
-            data = {
-                shows: 'Shows',
-                movies: 'Movies',
-                liveTV: 'Live TV',
-                songs: 'Songs',
-            }
-        }
-        else {
-            data = {
-                shows: 'შოუ',
-                movies: 'ფილმები',
-                liveTV: 'Live ტელევიზია',
-                songs: 'სიმღერები',
-            }
-        }
+        const text = this.props.text;
 
         return (
             <div className="nav-container">
@@ -36,16 +18,16 @@ class Navigation extends React.Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="nav navbar-nav ml-auto">
                             <li className="nav-item active">
-                                <a className="nav-link text-white" href="#">{data.shows}<span className="sr-only">(current)</span></a>
+                                <a className="nav-link text-white" href="#">{text.shows}<span className="sr-only">(current)</span></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">{data.movies}</a>
+                                <a className="nav-link text-white" href="#">{text.movies}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">{data.liveTV}</a>
+                                <a className="nav-link text-white" href="#">{text.liveTV}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" href="#">{data.songs}</a>
+                                <a className="nav-link text-white" href="#">{text.songs}</a>
                             </li>
                         </ul>
 

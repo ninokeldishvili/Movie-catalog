@@ -9,20 +9,13 @@ class VIPPoster extends React.Component {
     }
 
     render() {
-        let watchNow = 'Watch Now';
-
-        if (this.props.lang === 'ka') {
-            watchNow = 'ნახვა'
-        }
-
         return (
             <div className="container-fluid poster-container">
-                <Navigation lang={this.props.lang}></Navigation>
-
+                <Navigation text={this.props.text}></Navigation>
                 <img src={poster} alt="poster" />
                 <div className="poster-lables-container">
                     <h1>{this.props.vipMovie}</h1>
-                    <button className="watch-now-btn">{watchNow}</button>
+                    <button className="watch-now-btn">{this.props.text.watchNow}</button>
                 </div>
             </div>
         )
